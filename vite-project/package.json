@@ -1,0 +1,29 @@
+{
+  "name": "formula-one-blog",
+  "private": true,
+  "version": "1.0.0",
+  "description": "news about the formula one competition for the current season",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrirosa/formula-one-blog.git"
+  },
+  "author": "adrirosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrirosa/formula-one-blog/issues"
+  },
+  "homepage": "https://github.com/adrirosa/formula-one-blog#readme",
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.3",
+    "vite": "^3.0.7"
+  }
+}
