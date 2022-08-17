@@ -1,10 +1,18 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      isHover: false,
+    };
+  },
+};
+</script>
 
 <template>
-  <div class="home">
-    <div class="race-infos">
+  <div class="home" @mouseenter="isHover = true" @mouseleave="isHover = false">
+    <div class="race-infos " :class="{ hover: isHover }">
       <h1>Next race</h1>
-      <h2>Formula 1 Rolex Belgian Grand Prix</h2>
+      <p class="race-name">Formula 1 Rolex Belgian Grand Prix</p>
 
       <p>28 Aug 2022</p>
     </div>
@@ -23,7 +31,7 @@
     </span>
   </div>
   <div class="background"></div>
-  <div class="overlay"></div>
+  <div class="overlay" :class="{ hover: isHover }"></div>
 </template>
 
 <style scoped>
@@ -51,10 +59,25 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 1s 0.3s;
+}
+.overlay.hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.race-infos {
+  transition: font-size 1s;
+}
+.race-infos.hover {
+  font-size: xx-large;
+}
+.race-name{
+  font-size: 2em;
 }
 .credit {
   position: absolute;
   bottom: 0;
+  width: 100%;
   font-size: 12px;
   color: rgb(157, 157, 157);
 }
