@@ -1,5 +1,10 @@
 <script>
+import Countdown from "./Countdown.vue";
+
 export default {
+  components: {
+    Countdown,
+  },
   data() {
     return {
       isHover: false,
@@ -10,12 +15,14 @@ export default {
 
 <template>
   <div class="home" @mouseenter="isHover = true" @mouseleave="isHover = false">
-    <div class="race-infos " :class="{ hover: isHover }">
+    <div class="race-infos" :class="{ hover: isHover }">
       <h1>Next race</h1>
       <p class="race-name">Formula 1 Rolex Belgian Grand Prix</p>
 
       <p>28 Aug 2022</p>
     </div>
+
+    <Countdown />
 
     <span class="credit"
       >Photo by
@@ -71,7 +78,7 @@ export default {
 .race-infos.hover {
   font-size: xx-large;
 }
-.race-name{
+.race-name {
   font-size: 2em;
 }
 .credit {
