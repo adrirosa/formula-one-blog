@@ -18,7 +18,7 @@ export default {
         remainingMilliseconds
       );
 
-      return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+      return { days, hours, minutes, seconds };
     },
   },
   methods: {
@@ -42,5 +42,55 @@ export default {
 </script>
 
 <template>
-  <div>{{ timeRemaining }}</div>
+<p>Coming in</p>
+  <div class="countdown-container">
+    <div class="countdown-card">
+      <h2 class="countdown-timer">{{ timeRemaining.days }}</h2>
+      <p class="countdown-label">days</p>
+    </div>
+    <div class="countdown-card">
+      <h2 class="countdown-timer">
+        {{ timeRemaining.hours.toString().padStart(2, "0") }}
+      </h2>
+      <p class="countdown-label">hours</p>
+    </div>
+    <div class="countdown-card">
+      <h2 class="countdown-timer">
+        {{ timeRemaining.minutes.toString().padStart(2, "0") }}
+      </h2>
+      <p class="countdown-label">minutes</p>
+    </div>
+    <div class="countdown-card">
+      <h2 class="countdown-timer">
+        {{ timeRemaining.seconds.toString().padStart(2, "0") }}
+      </h2>
+      <p class="countdown-label">seconds</p>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+.countdown-container {
+  display: flex;
+  justify-content: center;
+}
+.countdown-card {
+  display: flex;
+  flex-direction: column;
+  width: 88px;
+  height: 120px;
+  padding: 16px;
+  margin: 0 8px;
+  background-color: rgb(220, 220, 220);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.74);
+  border-radius: 5px;
+  color: rgb(36, 36, 36);
+}
+.countdown-timer {
+  margin: 0;
+  font-size: 3em;
+  font-weight: 700;
+}
+.countdown-label {
+}
+</style>

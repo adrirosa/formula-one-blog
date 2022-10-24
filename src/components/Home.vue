@@ -1,9 +1,11 @@
 <script>
 import Countdown from "./Countdown.vue";
+import Schedule from "./Schedule.vue";
 
 export default {
   components: {
     Countdown,
+    Schedule,
   },
   data() {
     return {
@@ -19,7 +21,7 @@ export default {
       <h1>Next race</h1>
       <p class="race-name">Formula 1 Rolex Belgian Grand Prix</p>
 
-      <p>28 Aug 2022</p>
+      <!-- <p>28 Aug 2022</p> -->
     </div>
 
     <Countdown />
@@ -39,6 +41,10 @@ export default {
   </div>
   <div class="background"></div>
   <div class="overlay" :class="{ hover: isHover }"></div>
+
+  <section class="section">
+    <Schedule />
+  </section>
 </template>
 
 <style scoped>
@@ -87,5 +93,12 @@ export default {
   width: 100%;
   font-size: 12px;
   color: rgb(157, 157, 157);
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 </style>
