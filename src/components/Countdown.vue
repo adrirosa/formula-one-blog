@@ -91,6 +91,4 @@ export default {
   font-size: 3em;
   font-weight: 700;
 }
-.countdown-label {
-}
 </style>

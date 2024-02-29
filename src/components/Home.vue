@@ -42,9 +42,7 @@ export default {
   <div class="background"></div>
   <div class="overlay" :class="{ hover: isHover }"></div>
 
-  <section class="section">
-    <Schedule />
-  </section>
+  <Schedule class="section" />
 </template>
 
 <style scoped>
@@ -95,10 +93,4 @@ export default {
   color: rgb(157, 157, 157);
 }
 
-.section {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
 </style>
