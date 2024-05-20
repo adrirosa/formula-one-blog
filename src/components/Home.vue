@@ -16,45 +16,42 @@ export default {
 </script>
 
 <template>
-  <div class="home" @mouseenter="isHover = true" @mouseleave="isHover = false">
-    <div class="race-infos" :class="{ hover: isHover }">
-      <h1>Next race</h1>
-      <p class="race-name">Formula 1 Rolex Belgian Grand Prix</p>
-
-      <!-- <p>28 Aug 2022</p> -->
-    </div>
-
-    <Countdown />
-
-    <span class="credit"
-      >Photo by
-      <a
-        href="https://unsplash.com/@brondia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-        >Alexandre Brondino</a
-      >
-      on
-      <a
-        href="https://unsplash.com/s/photos/f1-belgian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-        >Unsplash</a
-      >
-    </span>
-  </div>
   <div class="background"></div>
   <div class="overlay" :class="{ hover: isHover }"></div>
+  <section class="slide">
+    <div
+      class="home"
+      @mouseenter="isHover = true"
+      @mouseleave="isHover = false"
+    >
+      <div class="race-infos" :class="{ hover: isHover }">
+        <h1>Next race</h1>
+        <p class="race-name">Formula 1 Rolex Belgian Grand Prix</p>
 
-  <Schedule class="section" />
+        <!-- <p>28 Aug 2022</p> -->
+      </div>
+
+      <Countdown />
+
+      <span class="credit"
+        >Photo by
+        <a
+          href="https://unsplash.com/@brondia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >Alexandre Brondino</a
+        >
+        on
+        <a
+          href="https://unsplash.com/s/photos/f1-belgian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >Unsplash</a
+        >
+      </span>
+    </div>
+  </section>
+
+  <Schedule class="slide" />
 </template>
 
 <style scoped>
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
 .background {
   top: 0;
   position: absolute;
@@ -75,7 +72,18 @@ export default {
 .overlay.hover {
   background-color: rgba(0, 0, 0, 0.75);
 }
-
+.slide{
+  height: 100vh;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
 .race-infos {
   transition: font-size 1s;
 }
@@ -92,5 +100,4 @@ export default {
   font-size: 12px;
   color: rgb(157, 157, 157);
 }
-
 </style>

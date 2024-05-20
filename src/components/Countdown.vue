@@ -69,7 +69,7 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .countdown-container {
   display: flex;
   justify-content: center;
@@ -81,7 +81,7 @@ export default {
   height: 120px;
   padding: 16px;
   margin: 0 8px;
-  background-color: rgb(220, 220, 220);
+  background-color: $-color-concrete;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.74);
   border-radius: 5px;
   color: rgb(36, 36, 36);

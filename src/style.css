@@ -8,9 +8,39 @@
   src: url("./assets/fonts/Mont-HeavyDEMO.otf") format("opentype");
   font-weight: 700;
 }
+@font-face {
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/TitilliumWeb-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/TitilliumWeb-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/TitilliumWeb-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("./assets/fonts/TitilliumWeb-Black.ttf") format("truetype");
+  font-weight: 900;
+}
 
 :root {
-  font-family: "Mont", sans-serif;
+  font-family: "Titillium Web","Mont", sans-serif;
   font-size: 16px;
 
   color-scheme: light dark;
@@ -51,7 +81,7 @@ h1 {
 }
 
 #app {
-  height: 100vh;
+  height: auto;
   width: 100%;
   margin: 0 auto;
   text-align: center;
